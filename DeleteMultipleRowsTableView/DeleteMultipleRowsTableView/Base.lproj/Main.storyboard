@@ -32,6 +32,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Numbers" id="RMf-0r-3IP">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="zoW-mD-4Se"/>
                         <rightBarButtonItems>
                             <barButtonItem title="Edit" id="mgo-uU-OhD">
                                 <connections>

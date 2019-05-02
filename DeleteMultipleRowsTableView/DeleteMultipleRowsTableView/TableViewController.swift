@@ -41,7 +41,7 @@ class TableViewController: UITableViewController {
     
     @IBAction func startEditing(_ sender: UIBarButtonItem) {
         
-        isEditing = !isEditing
+        isEditing.toggle()
         
     }
     
@@ -69,8 +69,17 @@ class TableViewController: UITableViewController {
             tableView.beginUpdates()
             tableView.deleteRows(at: selectedRows, with: .automatic)
             tableView.endUpdates()
+        } else {
+            let alert = UIAlertController(title: "Chọn Để Xoá", message: "Bạn chưa chọn nội dung cần xoá.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default) { action in })
+            
+            self.present(alert, animated: true, completion: nil)
+            //numbers.removeAll()
         }
+        tableView.reloadData()
     }
+    
+    
     
 
 }
